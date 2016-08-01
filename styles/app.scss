@@ -46,17 +46,19 @@ $max-width: 60rem;
 
 .list {
   margin-bottom: $gutter;
-  list-style: inherit;
-  color: $card-grey;
 
   &__item {
     width: $gutter * 4.5;
     margin: 1rem $gutter;
     padding-bottom: 0.2rem;
     border-bottom: $card-border;
-    color: $card-blue;
+    color: $card-grey;
     font-size: $item-font-size;
     list-style: square;
+  }
+
+  &__item-color {
+    color: $card-blue;
   }
 }
 
