@@ -1,41 +1,87 @@
 // @import 'yoga';
 // @import 'normalize';
 
-// $fa-font-path: '//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts';
-// @import 'font-awesome';
+$fa-font-path: '//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts';
+
+$max-width: 60rem;
+
+@import 'font-awesome';
 @import 'box-sizing';
 @import 'reset';
+@import 'variables';
+
+
+
+.main {
+  display: flex;
+  justify-content: center;
+}
 
 .box {
   display: flex;
-  justify-content: center;
-  border: solid grey;
+  flex-direction: column;
+  width: 90%;
+  border: solid grey 3px;
+  justify-items: center;
 }
 
 .lesson {
+  position: relative;
+  width: $gutter * 10;
+  margin: 50vh auto;
+  padding: $gutter;
+  transform: translateY(-50%);
+  border: $card-border;
+  border-radius: 0.5rem;
 
+  &__title {
+    color: $card-green;
+
+ }
+  &__subtitle {
+    margin-top: $gutter;
+    color: $card-grey-darker;
+  }
 }
 
-.number {
+.list {
+  margin-bottom: $gutter;
+  list-style: inherit;
+  color: $card-grey;
 
+  &__item {
+    width: $gutter * 4.5;
+    margin: 1rem $gutter;
+    padding-bottom: 0.2rem;
+    border-bottom: $card-border;
+    color: $card-blue;
+    font-size: $item-font-size;
+    list-style: square;
+  }
 }
 
-.css {
-
-}
-
-.dots {
-
-}
-
-.items {
-
+.circle {
+  position: absolute;
+  top: $gutter;
+  right: $gutter * -1;
+  width: $gutter * 3;
+  height: $gutter * 3;
+  border-radius: 100%;
+  background: $card-grey;
+  color: white;
+  font-size: $item-font-size * 2;
+  line-height: $gutter * 3;
+  text-align: center;
 }
 
 .share {
-
+  margin-left: 5%;
 }
 
 .icons {
-
+  color: $card-grey;
+  font-size: $icon-size;
+  i {
+    margin-right: $gutter / 2;
+  }
 }
